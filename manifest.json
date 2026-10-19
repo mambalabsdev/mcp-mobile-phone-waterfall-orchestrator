@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.3",
   "name": "mcp-mobile-phone-waterfall-orchestrator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Mobile Phone Waterfall. Find mobile phone numbers by chaining your own Prospeo, Lusha, ContactOut, and FullEnrich keys: one row per contact with the number, line type, country, Do Not Call flag, and the provider credits used. Runs on Apify. Clay-ready output.",
   "author": {
     "name": "Mamba Labs"

@@ -10,6 +10,10 @@ the provider credits it spent.
 It runs the [Mobile Phone Waterfall](https://apify.com/mambalabs/mobile-phone-waterfall-orchestrator)
 actor (Actor ID `6OOgPktf7RIa5XCOP`) on Apify.
 
+The Prospeo path has been run live on a real key (2026-10-19). The Lusha, ContactOut, and
+FullEnrich steps are built to each provider's documented API but have not yet been run on a live
+key; every run summary lists them under `providers_not_live_verified`. No key is stored.
+
 ## Tool
 
 | Tool | What it does |
@@ -38,7 +42,7 @@ actor (Actor ID `6OOgPktf7RIa5XCOP`) on Apify.
 
 `APIFY_TOKEN` is required to run the tool. The provider keys are optional and read from this
 server's environment, so they never pass through the model's context. With no provider key set, the
-run completes, calls nothing, and charges nothing.
+run completes, calls nothing, and charges only the run start fee.
 
 ## Inputs
 

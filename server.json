@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.mambabuilt/mcp-mobile-phone-waterfall-orchestrator",
   "description": "Find mobile phone numbers by chaining your own Prospeo, Lusha, ContactOut, and FullEnrich keys.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "url": "https://github.com/mambalabsdev/mcp-mobile-phone-waterfall-orchestrator",
     "source": "github"
@@ -11,7 +11,7 @@
     {
       "registryType": "npm",
       "identifier": "@mambalabsdev/mcp-mobile-phone-waterfall-orchestrator",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "transport": {
         "type": "stdio"
       },
