@@ -1,0 +1,51 @@
+{
+  "name": "@mambalabsdev/mcp-mobile-phone-waterfall-orchestrator",
+  "version": "1.0.0",
+  "description": "MCP server for Mobile Phone Waterfall. Find mobile phone numbers by chaining your own Prospeo, Lusha, ContactOut, and FullEnrich keys: one row per contact with the number, line type, country, Do Not Call flag, and the provider credits used. Runs on Apify. Clay-ready output.",
+  "type": "module",
+  "bin": {
+    "mcp-mobile-phone-waterfall-orchestrator": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mobile-phone",
+    "phone-number-finder",
+    "phone-enrichment",
+    "waterfall-enrichment",
+    "bring-your-own-key",
+    "apify",
+    "clay",
+    "lead-generation"
+  ],
+  "author": "Mamba Labs <labs@mambamindsetgrowth.com>",
+  "license": "MIT",
+  "homepage": "https://apify.com/mambalabs/mobile-phone-waterfall-orchestrator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-mobile-phone-waterfall-orchestrator"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "5.9.3"
+  },
+  "mcpName": "com.mambabuilt/mcp-mobile-phone-waterfall-orchestrator"
+}

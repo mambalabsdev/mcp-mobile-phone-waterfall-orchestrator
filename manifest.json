@@ -1,0 +1,69 @@
+{
+  "manifest_version": "0.3",
+  "name": "mcp-mobile-phone-waterfall-orchestrator",
+  "version": "1.0.0",
+  "description": "MCP server for Mobile Phone Waterfall. Find mobile phone numbers by chaining your own Prospeo, Lusha, ContactOut, and FullEnrich keys: one row per contact with the number, line type, country, Do Not Call flag, and the provider credits used. Runs on Apify. Clay-ready output.",
+  "author": {
+    "name": "Mamba Labs"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mambalabsdev/mcp-mobile-phone-waterfall-orchestrator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-mobile-phone-waterfall-orchestrator"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "build/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/build/index.js"
+      ],
+      "env": {
+        "APIFY_TOKEN": "${user_config.apify_token}",
+        "PROSPEO_API_KEY": "${user_config.prospeo_api_key}",
+        "LUSHA_API_KEY": "${user_config.lusha_api_key}",
+        "CONTACTOUT_API_KEY": "${user_config.contactout_api_key}",
+        "FULLENRICH_API_KEY": "${user_config.fullenrich_api_key}"
+      }
+    }
+  },
+  "user_config": {
+    "apify_token": {
+      "type": "string",
+      "title": "Apify API Token",
+      "description": "Apify API token for running the actor",
+      "sensitive": true,
+      "required": false
+    },
+    "prospeo_api_key": {
+      "type": "string",
+      "title": "Prospeo API Key",
+      "description": "Optional. Your own Prospeo key. The actor skips this provider without it.",
+      "sensitive": true,
+      "required": false
+    },
+    "lusha_api_key": {
+      "type": "string",
+      "title": "Lusha API Key",
+      "description": "Optional. Your own Lusha key. The actor skips this provider without it.",
+      "sensitive": true,
+      "required": false
+    },
+    "contactout_api_key": {
+      "type": "string",
+      "title": "Contactout API Key",
+      "description": "Optional. Your own Contactout key. The actor skips this provider without it.",
+      "sensitive": true,
+      "required": false
+    },
+    "fullenrich_api_key": {
+      "type": "string",
+      "title": "Fullenrich API Key",
+      "description": "Optional. Your own Fullenrich key. The actor skips this provider without it.",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

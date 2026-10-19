@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "mamba-mobile-phone-waterfall-orchestrator": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mambalabsdev/mcp-mobile-phone-waterfall-orchestrator"
+      ],
+      "env": {
+        "APIFY_TOKEN": "your-apify-token",
+        "PROSPEO_API_KEY": "optional",
+        "LUSHA_API_KEY": "optional",
+        "CONTACTOUT_API_KEY": "optional",
+        "FULLENRICH_API_KEY": "optional"
+      }
+    }
+  }
+}
